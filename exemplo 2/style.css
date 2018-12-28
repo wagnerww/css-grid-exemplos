@@ -14,12 +14,13 @@ div.app{
     background-color: #f2f2f2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 150px;
+    grid-template-rows: 100px 1fr 1fr 150px;
     grid-template-areas: 'header' 'main' 'footer';
 }
 
-div.header, div.main, div.footer{
+div.header, div.main, div.footer, aside, div.info{
     position: relative;
+    padding: 10px;
 }
 
 div.header{
@@ -27,10 +28,27 @@ div.header{
     background-color: #454545;
 }
 
-div.main{
+div.main{   
     grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 15px;
+}
+
+aside, div.content, div.info{
     background-color: #aa6677;
 }
+
+div.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;    
+ }
+
+ div.info > *{
+    padding: 15px;
+    background: black;
+ }
 
 div.footer{
     grid-area: footer;
