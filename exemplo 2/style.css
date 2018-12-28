@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+}
+
+div.app{
+    position: relative;
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 150px;
+    grid-template-areas: 'header' 'main' 'footer';
+}
+
+div.header, div.main, div.footer{
+    position: relative;
+}
+
+div.header{
+    grid-area: header;
+    background-color: #454545;
+}
+
+div.main{
+    grid-area: main;
+    background-color: #aa6677;
+}
+
+div.footer{
+    grid-area: footer;
+    background-color: #bb64bb;
+}
+
+
