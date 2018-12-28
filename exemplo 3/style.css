@@ -53,6 +53,15 @@ div.info{
 div.footer{
     grid-area: footer;
     background-color: #bb64bb;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
+div.footer > div{
+    padding: 15px;    
+}
+
+div.footer > div:not(:last-child){
+    border-right: 1px solid black;
+}
 
