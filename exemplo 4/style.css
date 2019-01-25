@@ -6,39 +6,48 @@
 
 body{
     color: white;
+    text-align: center;
 }
 
 div.app{
     position: relative;
     height: 100vh;
-    background-color: #f2f2f2;
+    background-color: #222831;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 150px 1fr;
     grid-template-rows: 100px 1fr 150px;
-    grid-template-areas: "header" 
-                        "main" 
-                        "footer";
+    grid-template-areas: "header header" 
+                        "nav main" 
+                        "nav footer";
 }
 
-div.header, div.main, div.footer, aside, div.info{
+header, footer, aside, div.content, div.info{
     position: relative;
     padding: 10px;
 }
 
-div.header{
-    grid-area: header;
-    background-color: #454545;
+nav{
+    grid-area: nav;
+    background: #14906a;
 }
 
-div.main{   
+header{
+    grid-area: header;
+    background-color: #14906a;
+}
+
+main{   
     grid-area: main;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 aside, div.content, div.info{
-    background-color: #aa6677;
+    background-color: #187159;
 }
 
 div.info{
@@ -52,18 +61,18 @@ div.info{
     background: black;
  }
 
-div.footer{
+footer{
     grid-area: footer;
-    background-color: #bb64bb;
+    background-color: #0a3442;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-div.footer > div{
+footer > div{
     padding: 15px;    
 }
 
-div.footer > div:not(:last-child){
+footer > div:not(:last-child){
     border-right: 1px solid black;
 }
 
