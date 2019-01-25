@@ -1,3 +1,7 @@
+/*
+    POWERED BY: wagnerricardonet@gmail.com, https://github.com/wagnerww
+*/
+
 *{
     padding: 0px;
     margin: 0px;
@@ -5,7 +9,7 @@
 }
 
 body{
-    color: white;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -14,28 +18,39 @@ div.app{
     height: 100vh;
     background-color: #222831;
     display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-template-rows: 100px 1fr 150px;
-    grid-template-areas: "header header" 
-                        "nav main" 
-                        "nav footer";
+    grid-template-columns: 175px 1fr; /*2 colunas*/
+    grid-template-rows: 100px 1fr 150px; /*3 linhas no máxino*/
+    grid-template-areas: "header header" /*linha 1, 2 col*/
+                        "nav main"       /*linha 2, 2 col*/
+                        "nav footer";    /*linha 3, 2 col*/
 }
 
+/* GERAL */
 header, footer, aside, div.content, div.info{
     position: relative;
     padding: 10px;
 }
 
-nav{
-    grid-area: nav;
-    background: #14906a;
+span{
+    position: absolute;
+    top:50%;
 }
 
+/* CABEÇALHO */
 header{
     grid-area: header;
     background-color: #14906a;
 }
 
+/* MENU */
+nav{
+    grid-area: nav;
+    background: #187159;
+    border-right: 1px solid black;
+    margin-right: 15px;
+}
+
+/* CORPO */
 main{   
     grid-area: main;
     position: relative;
@@ -57,10 +72,12 @@ div.info{
  }
 
  div.info > *{
+    position: relative;
     padding: 15px;
     background: black;
  }
 
+ /* RODAPÉ */
 footer{
     grid-area: footer;
     background-color: #0a3442;
@@ -69,10 +86,10 @@ footer{
 }
 
 footer > div{
+    position: relative;
     padding: 15px;    
 }
 
 footer > div:not(:last-child){
     border-right: 1px solid black;
 }
-
